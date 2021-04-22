@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    command: gunicorn blog_project.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - ./:/app
+      - static_volume:/app/static
+    expose:
+      - 8000
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+    env_file:
+      - ./.env
+    depends_on:
+      - db
+    container_name: bloggy_app
+  db:
+    image: postgres:12.0-alpine
+    env_file:
+      - ./.env.db
+    container_name: bloggy_database
+  nginx:
+    build: ./nginx
+    volumes:
+      - static_volume:/app/static
+    ports:
+      - 1337:80
+    depends_on:
+      - web
+    container_name: bloggy_nginx_server
+
+volumes:
+  static_volume:

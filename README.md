@@ -24,7 +24,7 @@ If everything is fine, the application should be available at address http://0.0
 > 3) provide username, e-mail and password
 > 4) confirm user was created by logging on http://0.0.0.0:1337/admin.
 
-### **How to run the tests**
+### **How to run automated tests**
 > 1) docker exec -it bloggy_app sh
 > 2) python manage.py test
 

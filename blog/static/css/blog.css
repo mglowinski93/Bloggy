@@ -1,7 +1,7 @@
 body { 
     margin:0;
     padding:0;
-    font-family:helvetica, sans-serif; 
+    font-family: 'Playfair Display', serif;
 }
 
 a { 
@@ -9,7 +9,7 @@ a {
     text-decoration:none; 
 }
 
-h1 { 
+h1 {
     font-weight:normal;
     border-bottom:1px solid #bbb;
     padding:0 0 10px 0;
@@ -32,6 +32,7 @@ h2 {
     padding:10px;
     background:#efefef; 
     height:100%;
+    border-bottom-left-radius: 25px;
 }
 
 p.date { 
@@ -39,6 +40,14 @@ p.date {
     font-family: georgia, serif;
     font-size: 12px;
     font-style: italic; 
+}
+
+#bloggy-icon {
+    float: left;
+    width: 50px;
+    height: 50px;
+    margin-top: 15px;
+    margin-right: 10px;
 }
 
 /* pagination */
@@ -81,6 +90,7 @@ input[type=submit] {
 /* comments */
 .comment {
     padding:10px;
+    width: 75%;
 }
 .comment:nth-child(even) {
     background:#efefef;

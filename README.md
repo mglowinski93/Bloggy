@@ -3,14 +3,13 @@
 Blog application developed in Django3.
 Application was developed with the support of a book [Django 3 By Example - Third Edition](https://www.packtpub.com/product/django-3-by-example-third-edition/9781838981952).
 
+![picture](Application_UI.png)
 
 ### **Installation**
 > 1) create .env and .env.db file (see [env section](#env-files) for more details)
-> 2) cd blog_project
-> 3) python manage.py collectstatic
-> 4) cd ..
-> 5) docker-compose build
-> 6) docker-compose up
+> 2) python manage.py collectstatic
+> 3) docker-compose build
+> 4) docker-compose up
 
 Notice that docker and docker-compose are required for running this application.
 
